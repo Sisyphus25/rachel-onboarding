@@ -33,7 +33,7 @@ public class ShopController {
   }
 
   @RequestMapping(value = "shop/product/add", method = RequestMethod.POST)
-  public String restockItem(@RequestParam(value = "name") String name, @RequestParam(value = "unit") String unit) {
+  public String addNewItem(@RequestParam(value = "name") String name, @RequestParam(value = "unit") String unit) {
     if (shopService.addNewProduct(name, unit)) {
       return "Add new item successful";
     }
